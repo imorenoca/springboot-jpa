@@ -15,8 +15,7 @@ Arreglo: pom.xml dependencias para la base de datos:
     <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
-        
-    <version>8.0.28</version> <!-- transitive vulnerable dependency maven -->
+        <version>8.0.28</version> <!-- transitive vulnerable dependency maven -->
     </dependency>
 ```
 
