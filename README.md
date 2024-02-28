@@ -18,7 +18,7 @@ springboot java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
 ```
-Este error es debido a que no carga correctamente los drivers de la conexion de la base de datos.
+Este error es debido a que no carga correctamente los drivers de la conexion de la base de datos.  
 Arreglo: pom.xml dependencias para la base de datos:
 ```xml
    		<dependency>
@@ -40,3 +40,16 @@ Arreglo: desde repositorio de maven instalo dependencias actualizadas:
         <artifactId>mysql-connector-j</artifactId>
         <version>8.3.0</version>
     </dependency>
+```
+
+Se crea la base de datos al lanzar el programa de Springboot, pero no genera el código: listado de registro en la base de datos.  
+El error es debido a la persistencia, cada vez que inicio el programa crea la base de datos pero machaca los registros. Se arregla modificando parte del código en el archivo de configuración de conexión a la base de datos "application.properties".  
+```
+spring.jpa.hibernate.ddl-auto=update
+
+```
+Cambio la clase padre para poder realizar paginación en PersonRepository.java.
+```
+public interface PersonRepository extends JpaRepository<Person, Long>
+```
+ 
