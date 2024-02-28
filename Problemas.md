@@ -12,11 +12,12 @@ springboot java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
 Este error es debido a que no carga correctamente los drivers de la conexion de la base de datos.  
 Arreglo: pom.xml dependencias para la base de datos:
 ```xml
-   		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.28</version> <!-- transitive vulnerable dependency maven -->
-		</dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        
+    <version>8.0.28</version> <!-- transitive vulnerable dependency maven -->
+    </dependency>
 ```
 
 
