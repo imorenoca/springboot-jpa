@@ -10,7 +10,7 @@ public class Person {
     private Long id;
     private String name;
     private String lastname;
-    @Column(name = "programming-language")
+    @Column(name = "programming_language")
     private String programmingLanguage;
     public Person() {
     }

@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.28</version> <!-- Asegúrate de usar la versión más reciente -->
+			<version>8.0.28</version> <!-- transitive vulnerable dependency maven -->
 		</dependency>
 
 		<dependency>
@@ -40,6 +40,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>
