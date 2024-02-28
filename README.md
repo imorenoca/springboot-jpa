@@ -54,4 +54,4 @@ Cambio la clase padre para poder realizar paginación en PersonRepository.java.
 ```
 public interface PersonRepository extends JpaRepository<Person, Long>
 ```
- 
+En la fase 4 pequeño error detectado, fijarse en el nombre de los atributos de las tablas cuando se hace referencia en una consulta personalizada.
