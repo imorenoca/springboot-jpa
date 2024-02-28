@@ -2,7 +2,7 @@
 
 ## Fases del Proyecto
 
-1. **Configuración del Proyecto**
+1. **Configuración del Proyecto** Los datos son arrojados por consola.
 
 2. **Creación del Archivo de Conexión a la Base de Datos**
 
